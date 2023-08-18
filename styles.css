@@ -1,0 +1,77 @@
+:root {
+    --background-color: #3cb371;
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .app-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .forgot-password {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: right;
+  }
+
+  .forgot-password:hover {
+    color: #3cb371;
+  }
+
+  .btn-container {
+    margin-top: 20px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .login-btn {
+    background-color: var(--background-color);
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  #sign-up {
+    color: var(--background-color);
+  }
