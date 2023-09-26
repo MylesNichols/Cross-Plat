@@ -1,0 +1,115 @@
+<html><head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- @import Google Font (site-wide) -->
+
+<link rel="icon" href="https://www.walkingwalletapp.com/assets/favicon.png">
+<link rel="apple-touch-icon" sizes="128x128" href="https://www.walkingwalletapp.com/assets/apple_touch_icon.png">
+<link rel="apple-touch-startup-image" href="https://www.walkingwalletapp.com/assets/apple_launch_icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="mobile-web-app-capable">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+input[type='submit'] {
+-webkit-appearance: none;
+opacity: 1;
+}
+
+</style>
+</head>
+
+<body>
+  <!-- step 1 of create account -->
+  <!-- animated bg -->
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+
+  <div class="loginbox" style="margin-top: 86px; height:674px;">
+      <a href="https://walkingwalletapp.com"><img src="../../assets/WWlogo.png" class="avatar" style="top: calc(-50% + 256px);"></a>
+
+      <h1 style=" margin-top: 12px; margin-bottom: -12px;">Create Account</h1>
+
+      <!-- step progress bar -->
+      <div class="stepper-wrapper">
+          <!-- step 1 active -->
+          <div class="stepper-item active">
+              <div class="step-counter">1</div>
+              <div class="step-name">Setup</div>
+          </div>
+          <!-- step 2 future item  -->
+          <div class="stepper-item ">
+              <div class="step-counter">2</div>
+              <div class="step-name">Security</div>
+          </div>
+      </div>
+      <!-- create account step 1 form -->
+      <form method="post">
+          <!-- username input  -->
+          <div>
+              <label for="user_name">Username </label>
+              <input id="text" type="text" name="user_name" maxlength="20" autofocus="" fdprocessedid="sayrh5">
+          </div>
+
+          <!-- error check username input  -->
+          
+              <div>
+                  <p class="error">&nbsp;</p>
+              </div>
+          
+          <!-- email input -->
+          <div>
+              <label for="email">Email</label>
+              <input id="text" type="text" name="email" fdprocessedid="3b0glw">
+          </div>
+
+          <!-- error check email input -->
+          
+              <div>
+                  <p class="error">&nbsp;</p>
+              </div>
+          
+          <!-- password input -->
+          <div>
+              <label for="password">Password </label>
+              <input id="text" type="password" name="password" fdprocessedid="ydvkng">
+          </div>
+
+          <!-- error check pwd input -->
+                          <div>
+                  <p class="error">&nbsp;</p>
+              </div>
+          
+          <!-- confirm password -->
+          <!-- password input -->
+          <div>
+              <label for="confirm_password">Confirm Password</label>
+              <input id="text" type="password" name="confirm_password" fdprocessedid="s68s5">
+          </div>
+
+          <!-- error check pwd input -->
+                          <div>
+                  <p class="error">&nbsp;</p>
+              </div>
+                      <!-- end of confirm password -->
+
+          <!-- submit button -->
+          <div style="padding-bottom: 10px;">
+              <input type="submit" name="submit1" value="Continue" fdprocessedid="3ylfm">
+          </div>
+
+          <!-- login page navigation link -->
+          <div style="margin-bottom: 12px; text-align:center;">
+              <span>Already have an account? <a href="login.html">Log in</a>.</span>
+          </div>
+
+      </form>
+
+  </div>
+  <br><br>
+
+
+
+</body></html>

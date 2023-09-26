@@ -1,0 +1,442 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #000;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .loginbox {
+    margin-top: 10px;
+    width: 400px;
+    height: 464px;
+    background: #fff;
+    color: #000;
+    top: 46%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 14px;
+    /* raised */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  }
+  
+  .avatar {
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(-50% + 140px);
+    left: calc(50% - 75px);
+  }
+  
+  h1 {
+    margin: 0;
+    margin-top: 12px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 26px;
+    margin-top: -5px;
+  }
+  
+  .loginbox label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+  
+  .loginbox input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .loginbox input[type="text"], input[type="password"] {
+    border: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+    margin: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 8px;
+  }
+  
+  .loginbox input[type="submit"] {
+    margin-top: 6px;
+    border: none;
+    outline: none;
+    height: 42px;
+    background: #3CB371;
+    color: #000;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    -webkit-appearance: none;
+    opacity: 1;
+  }
+  
+  .loginbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: #267349;
+    color: #fff;
+  }
+  
+  .loginbox a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3CB371;
+  }
+  
+  .loginbox a:hover {
+    color: #267349;
+  }
+  
+  /* error messages */
+  
+  .loginbox .error {
+    margin-top: 4px;
+    padding: 0;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #f44336;
+  }
+  
+  .forgotPwd a {
+    color: #333;
+  }
+  
+  .forgotPwd a:hover {
+    color: #3CB371;
+  }
+  
+  .returnLoginPage a {
+    color: #3CB371;
+  }
+  
+  .returnLoginPage a:hover {
+    color: #267349;
+  }
+  
+  .cancelResetPage a {
+    color: #f44336;
+  }
+  
+  .cancelResetPage a:hover {
+    color: #267349;
+  }
+  
+  /* app info / footer */
+  
+  .footer {
+    margin-top: 8px;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    color: #000;
+    top: calc(50% + 240px);
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  /* gradient background */
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    overflow: auto;
+  }
+  
+  .bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #3CB371 50%, #267349 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+  }
+  
+  .bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+  }
+  
+  .bg3 {
+    animation-duration: 5s;
+  }
+  
+  .content {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(-25%);
+    }
+  
+    100% {
+      transform: translateX(25%);
+    }
+  }
+  
+  /* step progress bar */
+  
+  .stepper-wrapper {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    /* @media screen and (max-width: 768px) {
+      font-size: 12px;
+    } */
+  }
+  
+  .stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;
+  }
+  
+  .stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+  }
+  
+  .stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-bottom: 6px;
+  }
+  
+  .stepper-item.active {
+    font-weight: bold;
+  }
+  
+  .stepper-item.completed .step-counter {
+    background-color: #04AA6D;
+  }
+  
+  .stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #04AA6D;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+  }
+  
+  .stepper-item:first-child::before {
+    content: none;
+  }
+  
+  .stepper-item:last-child::after {
+    content: none;
+  }
+  
+  
+  /* signup-pay affiliate code */
+  .code-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* new name form styling */
+  
+  .new-name-container input[type="text"] {
+    border: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #000;
+    font-size: 20px;
+    margin: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 8px;
+    text-align: center;
+    height: 40px;
+    font-family: poppins, sans-serif;
+    width: 160px;
+  }
+  
+  .new-name-container ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000;
+    opacity: 1;
+    /* Firefox */
+  }
+  
+  .new-name-container input[type="submit"] {
+    margin-top: 6px;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #3CB371;
+    color: #000;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    width: 160px;
+    font-family: 'Poppins', sans-serif;
+    -webkit-appearance: none;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.1s;
+  }
+  
+  .new-name-container input[type="submit"]:hover {
+    cursor: pointer;
+    background: #267349;
+    color: #fff;
+  }
+  
+  #not-now-submit {
+    background: #eee;
+    color: #000;
+    transition: 0.1s;
+  }
+  
+  #not-now-submit:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  
+  /* learn more modal */
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  /* .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  } */
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* additional */
+  /* Modal Content */
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 360px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    text-align: center;
+  }
+  
+  /* The Close Button */
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .more_info {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+  }
+  
+  #myBtn:hover {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+      .footer {
+        margin-top: 10px;
+      }
+    }
