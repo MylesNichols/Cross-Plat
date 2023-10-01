@@ -54,6 +54,43 @@
         }
       });
     });
+
+const CACHE_NAME = 'my-pwa-cache';
+const CACHE_VERSION = 'v1';
+const CACHE_PREFIX = CACHE_NAME + '-' + CACHE_VERSION;
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_PREFIX).then((cache) => {
+      return cache.addAll([
+        '/', // Cache the root URL (index.html)
+        '/manifest.json', // Cache your manifest file
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // If the request is in the cache, return the cached response
+      if (response) {
+        return response;
+      }
+
+      // If the request is not in the cache, fetch it from the network
+      return fetch(event.request).then((networkResponse) => {
+        // Cache the network response for future use
+        caches.open(CACHE_PREFIX).then((cache) => {
+          cache.put(event.request, networkResponse.clone());
+        });
+
+        // Return the network response to the browser
+        return networkResponse;
+      });
+    })
+  );
+});
   </script>
 </body>
 </html>
